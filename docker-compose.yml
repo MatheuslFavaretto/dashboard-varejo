@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dashboard-app:
+    build:
+      context: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./dashboard_market.py:/app/dashboard_market.py
+    environment:
+      - TZ=America/Sao_Paulo
